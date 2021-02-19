@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testapp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></head>
+<body>
+  <app-root>
+    <div style="text-align:center">
+      <h1>
+        Welcome to {{title}}!
+      </h1>
+      <button (click)="click1()" >click me</button>
+      <input type="text" [(ngModel)]='str1'>
+      <button (click)="getavg()">Get Average</button>
+      <input type="text" value={{resavg}}>
+      <button (click)="getimage()">Get Graph</button>
+      <button (click)="getDF()">Get Table</button>
+      <button (click)="getSBimage()">Get SB Graph</button>
+      <input type="text" [(ngModel)]='str2'>
+      <button (click)="getsine()">Get Sine</button>
+      </div>
+      <div><img src={{sinesrc}} width="500"></div>
+      <h2>yes, sine generated!</h2>
+      <img src={{imgsrc}} width="500">
+      <h2>Test App: {{c1.name}}</h2>
+      <span innerHtml={{pandas}}></span>
+      <img src={{sbimgsrc}} width="1000">
+  </app-root>
+<script type="text/javascript" src="{% static 'polyfills.js' %}"></script>
+<script type="text/javascript" src="{% static 'runtime.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor.js' %}"></script>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+</body>
+</html>
