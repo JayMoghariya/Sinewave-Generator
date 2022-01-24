@@ -1,2 +1,2 @@
 # Sinewave-Generator
-Sinewave generator by Django
+Sinewave generator using Django
